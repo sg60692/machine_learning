@@ -1,12 +1,12 @@
 import './App.css';
 import Header from './components/Header/Header.js';
 import Projects from './components/Projects/Projects';
-function b() {
 
+function b() {
   const list = []
 
-  for (var i=0;i<100;++i) {
-    list.push(<br/>)
+  for (var i = 0; i < 100; ++i) {
+    list.push(<br />)
   }
 
   return (

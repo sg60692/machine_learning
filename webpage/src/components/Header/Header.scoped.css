@@ -1,0 +1,55 @@
+.Header-wf{
+    width:inherit!important;
+}
+.nav-head{
+    font-size:17px!important;
+    font-family:'Pattaya','Times New Roman', Times, serif;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: left;
+    line-height: 1.2;
+}
+
+@media only screen and (min-width: 1250px) {
+    .Header-contact{
+        display: none!important;
+    }    
+}
+@media only screen and (max-width: 1250px) {
+    .nav-head{
+        text-align: left;
+        margin-left: -30px;
+    }
+}
+@media screen and (max-width: 1250px){
+    .navbar {
+        padding: 0!important;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .logo{
+        margin-right: 40px;
+    }
+    nav{
+        padding-top: 15px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .navbar{
+        padding-top: 2px!important;
+        padding-bottom: 2px!important;
+    }
+    .nav-head{
+        font-size:15px!important;   
+        align-items: center;
+        text-align: left;
+    }
+}
+@media screen and (max-width: 1250px){
+    .sidenav .closebtn,.hamburger {
+        position:absolute;
+        right: 1.5rem!important;
+        left:auto;
+    }
+}

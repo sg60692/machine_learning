@@ -1,0 +1,51 @@
+#Header{
+    margin:0;
+    padding:0;
+    width:250px;
+    color:white;
+    height: 100vh;
+    z-index:100;
+    position: fixed;    
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+.nav-heading{
+    font-family: 'Lobster', 'cursive';
+    background-color: #063146;
+    display: flex;
+    font-size: 22px;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 0;
+    line-height: 70px;
+    width:100%;
+}
+.nav-heading img{
+    width:65px;
+    height:65px;
+}
+.nav-heading span{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.sidebar{
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #042331;
+}
+.sidebar li{
+    line-height: 65px;
+    font-size: 20px;
+    border-top:1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid black;
+    padding-left: 35px;
+    transition: 0.4s;
+}
+.sidebar li:hover{
+    padding-left: 50px;
+}

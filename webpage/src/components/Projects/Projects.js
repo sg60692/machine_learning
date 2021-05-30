@@ -1,9 +1,10 @@
 import React from 'react';
 import './Projects.scoped.css';
-
+import Project from '../Project/Project.js';
 function Projects() {
     return (
-        <div>
+        <div style={{marginLeft:'250px'}}>
+            <Project></Project>
         </div>
     )
 }

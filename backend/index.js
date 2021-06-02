@@ -35,27 +35,10 @@ const Postmsg = async (req, res) => {
     });
 }
 
-router.post('/', Postmsg);
-router.get('/', (req, res) => res.send("Hello from GET"));
-
-// app.post('/', (req, res) => {
-
-//     var dataToSend;
-//     console.log(req.body);
-//     const python = spawn('python', ['script.py']);
-//     python.stdout.on('data', function (data) {
-//         console.log('Pipe data from python script ...');
-//         dataToSend = data.toString();
-//     });
-//     python.on('close', (code) => {
-//         console.log(`child process close all stdio with code ${code}`);
-//         res.send(dataToSend)
-//     });
-// });
+router.post('/Cancer', Postmsg);
+router.get('/Cancer', (req, res) => res.send("Hello from GET"));
 
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}!`);
-    // const request = new Request('http://localhost:420/', { method: 'GET', body: { 'Chutiya': 'Hun' } });
-    // fetch(request).then(res => console.log(res));//.catch((e) => console.log(e));
 });

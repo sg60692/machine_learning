@@ -34,10 +34,10 @@ function Project() {
         setFeatureValue(randomFeatures);
     }
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
-        const data = api.fetchreq(featureValue,'Cancer');
-        console.log(data);
+        const data = await api.fetchreq(featureValue,'Cancer');
+        console.log(data.data);
         setFeatureValue(initialState);
     }
 

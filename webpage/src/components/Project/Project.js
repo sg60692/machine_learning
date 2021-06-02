@@ -36,7 +36,7 @@ function Project() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        const data = action.fetchreq(featureValue);
+        const data = action.fetchreq(featureValue,'Cancer');
         console.log(data);
         setFeatureValue(initialState);
     }

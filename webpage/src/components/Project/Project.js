@@ -11,7 +11,7 @@ const numberOfFeatures = features.length;
 function Project() {
 
     const initialState = {};
-    for (var i = 0; i < numberOfFeatures; ++i) initialState[features[i]] = {};
+    for (var i = 0; i < numberOfFeatures; ++i) initialState[features[i]] ="";
     const [featureValue, setFeatureValue] = useState(initialState);
 
     function inputs() {

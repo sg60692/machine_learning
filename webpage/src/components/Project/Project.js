@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Project.scoped.css';
-import * as action from './../../action';
+import * as api from './../../api';
 
 var features = ['clump_thickness', 'uniform_cell_size', 'uniform_cell_shape',
     'marginal_adhesion', 'single_epithelial_size', 'bare_nuclei',
@@ -36,7 +36,7 @@ function Project() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        const data = action.fetchreq(featureValue,'Cancer');
+        const data = api.fetchreq(featureValue,'Cancer');
         console.log(data);
         setFeatureValue(initialState);
     }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Project.scoped.css';
-import { fetchreq } from './../../api/index';
+import * as action from './../../action';
 
 var features = ['clump_thickness', 'uniform_cell_size', 'uniform_cell_shape',
     'marginal_adhesion', 'single_epithelial_size', 'bare_nuclei',
@@ -11,7 +11,7 @@ const numberOfFeatures = features.length;
 function Project() {
 
     const initialState = {};
-    for (var i = 0; i < numberOfFeatures; ++i) initialState[features[i]] = -1;
+    for (var i = 0; i < numberOfFeatures; ++i) initialState[features[i]] = {};
     const [featureValue, setFeatureValue] = useState(initialState);
 
     function inputs() {
@@ -19,7 +19,7 @@ function Project() {
         for (var i = 0; i < numberOfFeatures; ++i)
             list.push(<input
                 name={features[i]}
-                value={featureValue[features[i]] !== -1 ? featureValue[features[i]] : {}}
+                value={featureValue[features[i]]}
                 onChange={(e) => setFeatureValue({ ...featureValue, [e.target.name]: e.target.value })}
                 placeholder={features[i]}
                 required
@@ -36,7 +36,7 @@ function Project() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        const data = fetchreq(featureValue);
+        const data = action.fetchreq(featureValue);
         console.log(data);
         setFeatureValue(initialState);
     }

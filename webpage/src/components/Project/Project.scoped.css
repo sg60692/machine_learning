@@ -1,7 +1,7 @@
 .Project-heading {
     background: #fff;
     padding: 1rem 1rem;
-    box-shadow: 0px 42px 33px -27px rgb(195 205 214 / 100%);
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.3);
     border-bottom: 1px solid rgba(0,0,0,0.1);
     border-top: 1px solid rgba(0,0,0,0.1);
     margin-left: auto;
@@ -14,7 +14,7 @@
 }
 .Project-graph img{
     width:60%;
-    height: 250px;
+    height: 300px;
     border-right: 1px solid;
     box-shadow: 0 0 10px 0 rgba(0, 10, 66, 0.4);
 }
@@ -46,9 +46,9 @@
     background-color: rgba(0,0,0,0.5); 
     width: 100%;
     display:inline-grid;
-    grid-template-columns: 49% 49%;
+    grid-template-columns: 32% 32% 32%;
     row-gap: 10px;
-    column-gap: 2%;
+    column-gap: 1.8%;
 }
 .Project-form input{
     height:30px;
@@ -65,7 +65,7 @@
     margin-top: 0;
     padding: 15px;
     padding-left: 20px;
-    background-color: rgba(163, 211, 238, 0.8);
+    background-color: rgb(157, 200, 235);
     border-left:3px solid rgba(0, 10, 66, 0.4);
     border-radius:35px 0 0 35px;
     color: #042331;
@@ -98,18 +98,67 @@ h4{
     font-family: 'Russo One', sans-serif;
     margin:0;
 }
-h5{
-    font-family: 'OpenSans';
-    font-weight: 400;
-    font-size: 18px;
-    margin:0;
-    margin-top: 5px;
-    margin-bottom:5px;
-}
+
 @import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
 h1{
     font-weight: 700;
     font-size: 30px;
     font-family: 'Pattaya', sans-serif;
     margin:0;
+}
+h5{
+    font-family: 'Pattaya', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin:0;
+    margin-top: 5px;
+    margin-bottom:5px;
+    font-style: italic;
+    text-shadow: 1px 1px rgba(235, 137, 175,0.3);
+}
+.btn-random,.btn-clear,.btn-submit{
+    height:30px;
+    border-radius: 2px;
+    color: #fff;
+}
+.btn-random{
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+.btn-clear{
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn-submit{
+    background-color: #28a745;
+    border-color: #28a745;
+}
+@media screen and (max-width: 1024px) {
+    .Project-about,.Project-graph{
+        flex-direction: column;
+        padding:0;
+    }
+    .Project-about-context{
+        width:85%;
+        margin-bottom: 10px;
+        border-radius:20px;
+        border-right:3px solid rgba(0, 10, 66, 0.4);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .Project-input{
+        width:90%;
+        margin-left: 4%;
+        margin-right: 6%;
+    }
+    .Project-form{    
+        width: 100%;
+        display:inline-grid;        
+    }
+    .Project-graph img{
+        margin-left: auto;
+        margin-right: auto;
+        width:100%;
+        height: 250px;
+    }
 }

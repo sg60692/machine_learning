@@ -3,7 +3,7 @@ import './Projects.scoped.css';
 import Project from '../Project/Project.js';
 function Projects() {
     return (
-        <div style={{marginLeft:'250px'}}>
+        <div class="Projects">
             <Project></Project>
         </div>
     )

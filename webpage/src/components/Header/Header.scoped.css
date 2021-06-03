@@ -21,10 +21,13 @@
     margin-bottom: 0;
     line-height: 70px;
     width:100%;
+    z-index:101;
 }
 .nav-heading img{
     width:65px;
     height:65px;
+    margin-left: 20px;
+    margin-right: 15px;
 }
 .nav-heading span{
     margin-top: auto;
@@ -37,6 +40,10 @@
     margin: 0;
     padding: 0;
     background-color: #042331;
+    position: absolute;
+    top:70px;
+    transition:0.5s;
+    z-index: 99;
 }
 .sidebar li{
     line-height: 65px;
@@ -48,4 +55,34 @@
 }
 .sidebar li:hover{
     padding-left: 50px;
+}
+#check{
+    display:none;
+}
+label #nav-btn,#nav-cancel{
+    position:absolute;
+    right:20px;
+    top:15px;
+    z-index: 130;
+    display:none;
+    padding:2px;
+    font-size: 35px;
+}
+@media screen and (max-width:750px){
+    #Header{
+        width:100%;
+    }
+    label #nav-btn{
+        display:block
+    }
+    .sidebar{top:-100%;}
+    #check:checked ~ .sidebar{
+        top:70px
+    }
+    #check:checked ~ label #nav-cancel{
+        display:block
+    }
+    #check:checked ~ label #nav-btn{
+        display:none
+    }
 }

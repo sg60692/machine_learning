@@ -17,7 +17,7 @@ function b() {
 }
 function App() {
   return (
-    <div className="App">
+    <div className="App" >
       <Header />
       <Projects />
       {b()}

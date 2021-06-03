@@ -21,7 +21,7 @@
     margin-bottom: 0;
     line-height: 70px;
     width:100%;
-    z-index:101;
+    z-index:105;
 }
 .nav-heading img{
     width:65px;
@@ -43,7 +43,7 @@
     position: absolute;
     top:70px;
     transition:0.5s;
-    z-index: 99;
+    z-index: 102;
 }
 .sidebar li{
     line-height: 65px;
@@ -67,6 +67,7 @@ label #nav-btn,#nav-cancel{
     display:none;
     padding:2px;
     font-size: 35px;
+    color:white;
 }
 @media screen and (max-width:750px){
     #Header{
@@ -80,10 +81,10 @@ label #nav-btn,#nav-cancel{
     #check:checked ~ #Header{
         height:100vh;
     }
-    #check:checked ~ .sidebar{
-        top:70px
-    }
-    
+    #check:checked ~ #Header .sidebar{
+        top:70px;
+        z-index:101;
+    }    
     #check:checked ~ label #nav-cancel{
         display:block
     }

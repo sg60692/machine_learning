@@ -71,14 +71,19 @@ label #nav-btn,#nav-cancel{
 @media screen and (max-width:750px){
     #Header{
         width:100%;
+        height:auto;
     }
     label #nav-btn{
         display:block
     }
-    .sidebar{top:-100%;}
+    .sidebar{top:-300%;}
+    #check:checked ~ #Header{
+        height:100vh;
+    }
     #check:checked ~ .sidebar{
         top:70px
     }
+    
     #check:checked ~ label #nav-cancel{
         display:block
     }

@@ -4,7 +4,7 @@ import TocIcon from '@material-ui/icons/Toc';
 import CancelIcon from '@material-ui/icons/Cancel';
 function Header() {  
     return (
-        <div id="Header" >
+        <div id="Header" class="Header-height" >
             <input type="checkbox" id="check"/>
                 <label for="check">
                     <TocIcon id="nav-btn"/>

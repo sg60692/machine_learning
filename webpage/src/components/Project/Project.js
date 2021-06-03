@@ -69,7 +69,7 @@ function Project() {
                     </div>
                     <form className="Project-form" onSubmit={handleSubmit}>
                         {inputs()}
-                        <button onClick={RandomInitialization} type="button" class="btn-random">Randomly Initiallize</button>
+                        <button onClick={RandomInitialization} type="button" class="btn-random">Random</button>
                         <button type="reset" onClick={(e) => setFeatureValue(initialState)} class="btn-clear">Clear</button>
                         <button type="submit" class="btn-submit">Submit</button>
                     </form>

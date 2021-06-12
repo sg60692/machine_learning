@@ -10,11 +10,12 @@ function Project(props) {
     var features = props.features;
     const numberOfFeatures = features.length;
     const initialState = {};
-    for (var i = 0; i < numberOfFeatures; ++i) initialState[features[i]] ="";
+    for (var i = 0; i < numberOfFeatures; ++i) initialState[features[i]] = "";
     const [featureValue, setFeatureValue] = useState(initialState);
-    const [insightToggle,setToggle] = useState(false)
-    function Toggle(){
+    const [insightToggle, setToggle] = useState(false)
+    function Toggle() {
         setToggle(!insightToggle);
+        console.log("hi");
     }
     function inputs() {
         var list = [];
@@ -38,13 +39,13 @@ function Project(props) {
 
     async function handleSubmit(e) {
         e.preventDefault();
-        const data = await api.fetchreq(featureValue,props.url);
+        const data = await api.fetchreq(featureValue, props.url);
         console.log(data.data);
         setFeatureValue(initialState);
     }
 
     return (
-        <div id={props.url} className="Project">
+        <div id={props.name} className="Project">
             <div className="Project-heading">
                 <h1>{props.name}</h1>
             </div>
@@ -60,27 +61,27 @@ function Project(props) {
                     </div>
                     <form className="Project-form" onSubmit={handleSubmit}>
                         <div className="Project-form-grid">{inputs()}</div>
-                        <div className="Project-form-grid" style={{marginTop:'10px'}}>
+                        <div className="Project-form-grid" style={{ marginTop: '10px' }}>
                             <button onClick={RandomInitialization} type="button" class="btn-random">Random</button>
                             <button type="reset" onClick={(e) => setFeatureValue(initialState)} class="btn-clear">Clear</button>
                             <button type="submit" class="btn-submit">Submit</button>
-                        </div>                      
+                        </div>
                     </form>
                 </div>
             </div>
             <div className="Project-graph">
-                <img src={props.img} />                
+                <img src={props.img} />
                 <div className="Project-graph-links">
-                    <div className={`insights ${insightToggle?'insights-display':''}`} > 
-                        <IconButton className="cancel" onClick={Toggle}><CancelIcon/> </IconButton>
+                    <div className={`insights ${insightToggle ? 'insights-display' : ''}`} >
+                        <IconButton className="cancel" onClick={Toggle}><CancelIcon /> </IconButton>
                         <p>{props.insights}</p>
                     </div>
-                    <button className="view-insights" onClick={Toggle}><span>View Insights</span><AppsIcon/></button>
-                    <a href={props.dataset}><button className="view-dataset"><span>View Dataset</span><AssignmentIcon/></button></a>                    
-                    <a href={props.github}><button className="view-code"><span>View Code</span><GitHubIcon/></button></a>
+                    <button className="view-insights" onClick={Toggle}><span>View Insights</span><AppsIcon /></button>
+                    <a href={props.dataset}><button className="view-dataset"><span>View Dataset</span><AssignmentIcon /></button></a>
+                    <a href={props.github}><button className="view-code"><span>View Code</span><GitHubIcon /></button></a>
                 </div>
             </div>
-            <hr/>
+            <hr />
         </div>
     )
 }

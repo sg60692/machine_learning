@@ -10,4 +10,4 @@ loaded_model = pickle.load(open('./script/RFR.pkl', 'rb'))
 
 result = loaded_model.predict(features)
 
-print(result)
+print(np.squeeze(result))

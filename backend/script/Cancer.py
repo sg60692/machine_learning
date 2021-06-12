@@ -3,10 +3,10 @@ import  sys
 import pickle
 import numpy as np
 
-example_measures = np.array([int(feature) for feature in sys.argv[1].split(',')])
+features = np.array([int(feature) for feature in sys.argv[1].split(',')])
 
 loaded_model = pickle.load(open('./script/kNeighborsClassifier.pkl', 'rb'))
 
-result = loaded_model.predict(example_measures.reshape(1,-1))
+result = loaded_model.predict(features.reshape(1,-1))
 
 print(result)

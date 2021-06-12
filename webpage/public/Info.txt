@@ -2,7 +2,7 @@ ML_models = [{
         name: "Breast Cancer Classification",
         features: ['clump_thickness', 'uniform_cell_size', 'uniform_cell_shape', 'marginal_adhesion', 'single_epithelial_size', 'bare_nuclei', 'bland_chromatin', 'normal_nucleoli', 'mitoses'],
         algorithm: "K Nearest Neighbour Classification",
-        heading: "Classfies the Breast Cancer type as malignant and benign",
+        heading: "Classifies the Breast Cancer type as malignant and benign",
         description: "This algorithm calculates the K nearest points from the input feature vector from training data set, the class assigned to the input is then calculated by taking the most frequently occuring class from the K neighbours, weighted by their distances.",
     },
     { 

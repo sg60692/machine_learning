@@ -39,10 +39,9 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    background-color: #042331;
-    position: absolute;
-    top:70px;
+    background-color: #042331;    
     transition:0.5s;
+    transition:padding 0.5s;
     z-index: 102;
 }
 .sidebar li{
@@ -60,7 +59,7 @@
     display:none;
 }
 label #nav-btn,#nav-cancel{
-    position:absolute;
+    position:fixed;
     right:20px;
     top:15px;
     z-index: 130;
@@ -72,17 +71,17 @@ label #nav-btn,#nav-cancel{
 @media screen and (max-width:750px){
     #Header{
         width:100%;
-        height:auto;
+        height:auto;   
     }
     label #nav-btn{
         display:block
     }
-    .sidebar{top:-300%;}
+    .sidebar{margin-top:-100%;}
     #check:checked ~ #Header{
         height:100vh;
     }
     #check:checked ~ #Header .sidebar{
-        top:70px;
+        padding-top:100%;
         z-index:101;
     }    
     #check:checked ~ label #nav-cancel{

@@ -1,3 +1,8 @@
+.Project{
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
+}
 .Project-heading {
     background: #fff;
     padding: 1rem 1rem;
@@ -11,15 +16,83 @@
     margin-top: 20px;
     width: 100%;
     background: #f6f6f6;
+    margin-bottom: 40px;
 }
 .Project-graph img{
     width:60%;
-    height: 300px;
+    height: 250px;
     border-right: 1px solid;
     box-shadow: 0 0 10px 0 rgba(0, 10, 66, 0.4);
 }
 .Project-graph-links{
     width:40%;
+    padding:10px;
+    align-items: center;
+    padding-top: 30px;
+}
+.Project-graph-links span{
+    width:80%;
+}
+.Project-graph-links a{
+    text-decoration: none;
+}
+.insights{
+    z-index: 2;
+    position:absolute;
+    margin-left:100%;
+    width: inherit;
+    background-color: #fff;
+    margin-top: -15px;
+    height: 200px;
+    display: block;
+    overflow: hidden;
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.137);
+    transition: 0.5s ease;
+}
+.insights-display{
+    margin-left:0;
+}
+.insights p{
+    padding:5px;
+}
+.cancel{
+    float:right;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 15px;
+    padding: 0;
+    outline: 0;
+    border-radius: 50%;
+    
+}
+.view-code,.view-insights,.view-dataset{
+    color:white;
+    width: 80%;
+    padding:10px;
+    border-radius: 5px;
+    padding-left: 10%;
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top:5px;
+    text-align:left;
+    font: inherit;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 1px 8px rgb(107, 180, 209);
+    display: flex;
+}
+.view-insights{
+    background-color: #EA4555;
+    text-align: left;
+    font:inherit; 
+    position: relative;
+}
+.view-code{
+    background-color: black;
+}
+.view-dataset{
+    background-color: #e0b527;
 }
 .Project-about{
     display: flex;
@@ -45,6 +118,12 @@
     padding:1%;
     background-color: rgba(0,0,0,0.5); 
     width: 100%;
+    display: block;
+    position: relative;
+}
+.Project-form-grid{
+    position: relative;
+    width:100%;
     display:inline-grid;
     grid-template-columns: 32% 32% 32%;
     row-gap: 10px;
@@ -151,14 +230,15 @@ h5{
         margin-left: 4%;
         margin-right: 6%;
     }
-    .Project-form{    
-        width: 100%;
-        display:inline-grid;        
-    }
     .Project-graph img{
         margin-left: auto;
         margin-right: auto;
         width:100%;
         height: 250px;
+    }
+    .Project-graph-links{
+        margin-left: auto;
+        margin-right: auto;
+        width:100%;
     }
 }

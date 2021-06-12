@@ -1,0 +1,16 @@
+const ML_models = [{
+    name: "Breast Cancer Classification",
+    features: ['clump_thickness', 'uniform_cell_size', 'uniform_cell_shape', 'marginal_adhesion', 'single_epithelial_size', 'bare_nuclei', 'bland_chromatin', 'normal_nucleoli', 'mitoses'],
+    algorithm: "K Nearest Neighbour Classification",
+    subheading: "Classifies the Breast Cancer type as malignant and benign",
+    description: "This algorithm calculates the K nearest points from the input feature vector from training data set, the class assigned to the input is then calculated by taking the most frequently occuring class from the K neighbours, weighted by their distances.",
+},
+{ 
+    name: "Board Game Review Prediction",
+    features: ['yearpublished', 'minplayers', 'maxplayers','playingtime','minage','users_rated', 'total_owners',  'total_traders', 'total_wanters', 'total_wishers', 'total_comments', 'total_weights', 'average_weight'],
+    algorithm: "Linear and Random Forest Regressor",
+    subheading: "",
+    description: "Reviews can make or break a product; as a result, many companies take drastic measures to ensure that their product receives good reviews. When it comes to board games, reviews and word-of-mouth are everything. In this model, we have used a linear regression model to predict the average review a board game will receive based on characteristics such as minimum and maximum number of players, playing time, complexity, etc."
+}
+] 
+export default ML_models;

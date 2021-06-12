@@ -15,7 +15,6 @@ function Project(props) {
     const [insightToggle,setToggle] = useState(false)
     function Toggle(){
         setToggle(!insightToggle);
-        console.log("hi");
     }
     function inputs() {
         var list = [];
@@ -39,13 +38,13 @@ function Project(props) {
 
     async function handleSubmit(e) {
         e.preventDefault();
-        const data = await api.fetchreq(featureValue,'Cancer');
+        const data = await api.fetchreq(featureValue,props.url);
         console.log(data.data);
         setFeatureValue(initialState);
     }
 
     return (
-        <div id={props.name} className="Project">
+        <div id={props.url} className="Project">
             <div className="Project-heading">
                 <h1>{props.name}</h1>
             </div>

@@ -5,12 +5,12 @@ import ProjectList from './ProjectList.js';
 function makeProjects()
 {
     var list = [];
-    for(let i=0;i<ProjectList.length;++i)list.push(<Project {...ProjectList[i]}/>);
+    for(let i=0;i<ProjectList.length;++i)list.push(<Project {...ProjectList[i]} key={ProjectList[i].url}/>);
     return list;
 }
 function Projects() {
     return (
-        <div class="Projects">
+        <div className="Projects">
             {makeProjects()}
         </div>
     )

@@ -52,7 +52,7 @@
     padding-left: 35px;
     transition: 0.4s;
 }
-.sidebar li:hover{
+li:hover{
     padding-left: 50px;
 }
 #check{

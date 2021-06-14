@@ -15,7 +15,6 @@ function Project(props) {
     const [insightToggle, setToggle] = useState(false)
     function Toggle() {
         setToggle(!insightToggle);
-        console.log("hi");
     }
     function inputs() {
         var list = [];
@@ -27,6 +26,7 @@ function Project(props) {
                 placeholder={features[i]}
                 required
                 title={features[i]}
+                key={features[i]}
                 type="number" />);
         return list;
     }
@@ -45,7 +45,7 @@ function Project(props) {
     }
 
     return (
-        <div id={props.name} className="Project">
+        <div id={props.url} className="Project">
             <div className="Project-heading">
                 <h1>{props.name}</h1>
             </div>
@@ -62,9 +62,9 @@ function Project(props) {
                     <form className="Project-form" onSubmit={handleSubmit}>
                         <div className="Project-form-grid">{inputs()}</div>
                         <div className="Project-form-grid" style={{ marginTop: '10px' }}>
-                            <button onClick={RandomInitialization} type="button" class="btn-random">Random</button>
-                            <button type="reset" onClick={(e) => setFeatureValue(initialState)} class="btn-clear">Clear</button>
-                            <button type="submit" class="btn-submit">Submit</button>
+                            <button onClick={RandomInitialization} type="button" className="btn-random">Random</button>
+                            <button type="reset" onClick={(e) => setFeatureValue(initialState)} className="btn-clear">Clear</button>
+                            <button type="submit" className="btn-submit">Submit</button>
                         </div>
                     </form>
                 </div>

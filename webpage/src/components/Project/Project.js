@@ -6,6 +6,7 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 import AppsIcon from '@material-ui/icons/Apps';
 import CancelIcon from '@material-ui/icons/Cancel';
 import IconButton from '@material-ui/core/IconButton';
+
 function Project(props) {
     var features = props.features;
     const numberOfFeatures = features.length;
@@ -16,6 +17,7 @@ function Project(props) {
     function Toggle() {
         setToggle(!insightToggle);
     }
+
     function inputs() {
         var list = [];
         for (var i = 0; i < numberOfFeatures; ++i)
@@ -40,7 +42,7 @@ function Project(props) {
     async function handleSubmit(e) {
         e.preventDefault();
         const data = await api.fetchreq(featureValue, props.url);
-        console.log(data.data);
+        console.log(data);
         setFeatureValue(initialState);
     }
 
@@ -69,6 +71,7 @@ function Project(props) {
                     </form>
                 </div>
             </div>
+
             <div className="Project-graph">
                 <img src={props.img} />
                 <div className="Project-graph-links">
@@ -76,6 +79,7 @@ function Project(props) {
                         <IconButton className="cancel" onClick={Toggle}><CancelIcon /> </IconButton>
                         <p>{props.insights}</p>
                     </div>
+
                     <button className="view-insights" onClick={Toggle}><span>View Insights</span><AppsIcon /></button>
                     <a href={props.dataset}><button className="view-dataset"><span>View Dataset</span><AssignmentIcon /></button></a>
                     <a href={props.github}><button className="view-code"><span>View Code</span><GitHubIcon /></button></a>

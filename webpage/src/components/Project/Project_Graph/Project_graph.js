@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import './Project.scoped.css';
+import './Project_graph.scoped.css';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import AppsIcon from '@material-ui/icons/Apps';
@@ -13,7 +13,7 @@ function Project_graph(props) {
     }
     return (
         <div className="Project-graph">
-            <img src={props.img} />
+            <img src={props.img} alt="graph"/>
             <div className="Project-graph-links">
                 <div className={`insights ${insightToggle ? 'insights-display' : ''}`} >
                     <IconButton className="cancel" onClick={Toggle}><CancelIcon /> </IconButton>

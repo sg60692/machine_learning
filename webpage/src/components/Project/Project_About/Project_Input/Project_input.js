@@ -1,8 +1,8 @@
 import React,{useState} from 'react';
-import './Project.scoped.css';
-import * as api from './../../api';
+import './Project_input.scoped.css';
+import * as api from '../../../../api';
 
-function Project_about(props) {
+function Project_input(props) {
     var features = props.features;
     const numberOfFeatures = features.length;
     const initialState = {};
@@ -36,27 +36,20 @@ function Project_about(props) {
         setFeatureValue(initialState);
     }
     return (
-        <div className="Project-about">
-            <div className="Project-about-context">
-                <h3>{props.algorithm}</h3>
-                <h5>{props.subheading}</h5>
-                <div>{props.description}</div>
+        <div className="Project-input">
+            <div className="Project-input-heading">
+                <h4>Test Input</h4>
             </div>
-            <div className="Project-input">
-                <div className="Project-input-heading">
-                    <h4>Test Input</h4>
+            <form className="Project-form" onSubmit={handleSubmit}>
+                <div className="Project-form-grid">{inputs()}</div>
+                <div className="Project-form-grid" style={{ marginTop: '10px' }}>
+                    <button onClick={RandomInitialization} type="button" className="btn-random">Random</button>
+                    <button type="reset" onClick={(e) => setFeatureValue(initialState)} className="btn-clear">Clear</button>
+                    <button type="submit" className="btn-submit">Submit</button>
                 </div>
-                <form className="Project-form" onSubmit={handleSubmit}>
-                    <div className="Project-form-grid">{inputs()}</div>
-                    <div className="Project-form-grid" style={{ marginTop: '10px' }}>
-                        <button onClick={RandomInitialization} type="button" className="btn-random">Random</button>
-                        <button type="reset" onClick={(e) => setFeatureValue(initialState)} className="btn-clear">Clear</button>
-                        <button type="submit" className="btn-submit">Submit</button>
-                    </div>
-                </form>
-            </div>
+            </form>
         </div>
     )
 }
 
-export default Project_about
+export default Project_input

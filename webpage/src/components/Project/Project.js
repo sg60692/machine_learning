@@ -1,7 +1,7 @@
 import React from 'react';
 import './Project.scoped.css';
-import ProjectAbout from './Project_about';
-import ProjectGraph from './Project_graph';
+import ProjectAbout from './Project_About/Project_about';
+import ProjectGraph from './Project_Graph/Project_graph.js';
 
 function Project(props) {   
     return (

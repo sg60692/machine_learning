@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState} from 'react'
 import './Header.scoped.css';
 import ProjectList from '../Projects/ProjectList.js';
 import TocIcon from '@material-ui/icons/Toc';
@@ -11,7 +11,7 @@ function Header() {
     }
     function NavItem(props) {
         return (
-          <li onClick={handleClick} key={props.name}><AnchorLink href={`#${props.name}`} style={{color:'white',textDecoration:'none'}}>{props.name}</AnchorLink></li>
+          <li onClick={handleClick} key={props.name}><AnchorLink href={`#${props.name}`} >{props.name}</AnchorLink></li>
         );
     }
     function navItems(){
@@ -27,8 +27,8 @@ function Header() {
                 <CancelIcon onClick={handleClick} id="nav-cancel"/>
             </label>
             <div id="Header">                
-                <a className="nav-heading">
-                    <img src="https://erp.iitbbs.ac.in/lib/img/images/iitb.png"/>
+                <a href="/" className="nav-heading">
+                    <img src="https://erp.iitbbs.ac.in/lib/img/images/iitb.png" alt="logo"/>
                     <span>ML</span>
                 </a>
                 <ul className="sidebar">{navItems()}</ul>

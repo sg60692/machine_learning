@@ -1,0 +1,69 @@
+.Project-input{    
+    border-radius:2px;
+    width: 40%;
+    margin-right: auto;
+}
+.Project-input-heading{
+    padding: 1%;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+.Project-form{   
+    border-radius:0 0 5px 5px;
+    padding:1%;
+    background-color: rgba(0,0,0,0.5); 
+    width: 100%;
+    display: block;
+    position: relative;
+}
+.Project-form-grid{
+    position: relative;
+    width:100%;
+    display:inline-grid;
+    grid-template-columns: 32% 32% 32%;
+    row-gap: 10px;
+    column-gap: 1.8%;
+}
+.Project-form input{
+    height:30px;
+    border-radius: 2px;
+    border: 1px solid #CCCCCC;
+    text-align: center;
+}
+.Project-form input:focus{
+    outline: none;     /* oranges! yey */
+}
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+h4{
+    font-weight: 400;
+    font-size: 24px;
+    font-family: 'Russo One', sans-serif;
+    margin:0;
+}
+.btn-random,.btn-clear,.btn-submit{
+    height:30px;
+    border-radius: 2px;
+    color: #fff;
+}
+.btn-random{
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+.btn-clear{
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn-submit{
+    background-color: #28a745;
+    border-color: #28a745;
+}
+@media screen and (max-width: 1200px) {
+    .Project-input{
+        width:90%;
+        margin-left: 4%;
+        margin-right: 6%;
+    }
+}

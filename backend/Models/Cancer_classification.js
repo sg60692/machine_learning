@@ -11,6 +11,8 @@ const Cancer_classification = async (req, res) => {
     const python = spawn('python', ['script/Cancer.py', X]);
     python.stdout.on('data', function (data) {
         result = data.toString();
+        if (result == 2) result = "Benign Cancer";
+        else result = "Malignant Cancer";
         console.log(result);
     });
     python.stderr.on('data', function (e) {

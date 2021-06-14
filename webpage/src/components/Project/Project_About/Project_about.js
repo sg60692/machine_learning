@@ -10,7 +10,7 @@ function Project_about(props) {
                 <h5>{props.subheading}</h5>
                 <div>{props.description}</div>
             </div>
-            <ProjectInput {...props}/>
+            <ProjectInput {...props} />
         </div>
     )
 }

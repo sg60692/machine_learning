@@ -1,6 +1,9 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import './Project_input.scoped.css';
 import * as api from '../../../../api';
+import sweetalert from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+const MySwal = withReactContent(sweetalert);
 
 function Project_input(props) {
     var features = props.features;
@@ -31,9 +34,11 @@ function Project_input(props) {
 
     async function handleSubmit(e) {
         e.preventDefault();
-        const data = await api.fetchreq(featureValue, props.url);
-        console.log(data);
-        setFeatureValue(initialState);
+        MySwal.fire({
+            title: " Result ",
+            html: <Alert feature={featureValue} url={props.url} />,
+            allowOutsideClick: false
+        }).then(() => setFeatureValue(initialState));
     }
     return (
         <div className="Project-input">
@@ -51,5 +56,14 @@ function Project_input(props) {
         </div>
     )
 }
+
+function Alert(props) {
+    const [alert, setalert] = useState({ text: "Loading..." });
+    if (alert.text === "Loading...")
+        api.fetchreq(props.feature, props.url).then(data => { setalert({ text: data.data }); console.log(data); });
+
+    return <div>{alert.text}</div>
+}
+
 
 export default Project_input

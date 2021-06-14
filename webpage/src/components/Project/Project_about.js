@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import './Project.scoped.css';
 import * as api from './../../api';
 

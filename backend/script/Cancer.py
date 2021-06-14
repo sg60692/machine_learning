@@ -1,7 +1,6 @@
 from os import write
 import sys
 import pickle
-import sklearn
 import numpy as np
 
 features = np.array([int(feature) for feature in sys.argv[1].split(',')])

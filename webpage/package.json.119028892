@@ -15,9 +15,7 @@
     "react": "^17.0.2",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^17.0.2",
-    "react-popup-alert": "^2.0.0",
     "react-scripts": "4.0.3",
-    "sweetalert2": "^11.0.17",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

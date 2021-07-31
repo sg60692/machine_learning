@@ -20,10 +20,17 @@ const ML_models = [{
 {
     url: "Diabetes",
     dataset: "https://www.kaggle.com/uciml/pima-indians-diabetes-database",
+    name: "Diabetes Detection",
     features: ["Pregnancies", "Glucose", "BloodPressure", "SkinThickness", "Insulin", "BMI", "DiabetesPedigreeFunction", "Age"],
     algorithm: "Neural Network",
     subheading: "Predicts if a person has diabetes or not using his/her medical records",
     description: "Traditionally doctors and medicians have been predicting out the probability of having chronic dieseases using person's medical history, but with the development of Machine Learning and sophisticated algorithm, the machine learns to predict the odds of having these diseases with just hours or even minutes of training. Thus it automates this task and helps doctors to predict more confidently with less bias."
+},
+{
+    url: "DigitRecongnition",
+    dataset: "http://yann.lecun.com/exdb/mnist",
+    name: "Digit Recongnition",
+    algorithm: "Convolutional Neural Network(CNN)"
 }
 ]
 export default ML_models;

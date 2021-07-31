@@ -17,6 +17,7 @@ const Cancer_classification = async (req, res) => {
     });
     python.stderr.on('data', function (e) {
         console.log(e.toString());
+        result = "Some Error Occured. Please try after some time";
     });
     python.on('close', (code) => {
         res.send(result)

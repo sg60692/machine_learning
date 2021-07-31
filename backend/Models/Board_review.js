@@ -10,9 +10,12 @@ const Board_review = async (req, res) => {
     python.stdout.on('data', function (data) {
         result = data.toString();
         console.log(result);
+        if (result.length > 5) result = result.substr(0, 5);
+        result = "Predicted Rating of game(out of 10): " + result;
     });
     python.stderr.on('data', function (e) {
         console.log(e.toString());
+        result = "Some Error Occured. Please try after some time";
     });
     python.on('close', (code) => {
         res.send(result)

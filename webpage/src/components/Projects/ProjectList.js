@@ -1,6 +1,19 @@
-const ML_models = [{
+import img_Cancer from "../../images/Cancer.webp";
+import img_BoardGame from "../../images/BoardGame.webp";
+import img_Diabetes from "../../images/Diabetes.webp";
+import img_Digit from "../../images/Digit.webp";
+const ML_models = [
+{
+    url: "DigitRecognition",
+    img: img_Digit,
+    dataset: "http://yann.lecun.com/exdb/mnist",
+    name: "Digit Recongnition",
+    algorithm: "Convolutional Neural Network(CNN)"
+},
+{
     url: "Cancer",
-    "dataset": "https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/",
+    img: img_Cancer,
+    dataset: "https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/",
     name: "Breast Cancer Classification",
     features: ['clump_thickness', 'uniform_cell_size', 'uniform_cell_shape', 'marginal_adhesion', 'single_epithelial_size', 'bare_nuclei', 'bland_chromatin', 'normal_nucleoli', 'mitoses'],
     algorithm: "K Nearest Neighbour Classification",
@@ -9,6 +22,7 @@ const ML_models = [{
 },
 {
     url: "BoardGame",
+    img: img_BoardGame,
     dataset: "https://github.com/sg60692/machine_learning/blob/main/Jupyter-notebooks/Board%20Game%20Review%20Predictions/games.csv",
     name: "Board Game Review Prediction",
     features: ['yearpublished', 'minplayers', 'maxplayers', 'playingtime', 'minage', 'users_rated', 'total_owners', 'total_traders', 'total_wanters', 'total_wishers', 'total_comments', 'total_weights', 'average_weight'],
@@ -19,18 +33,13 @@ const ML_models = [{
 },
 {
     url: "Diabetes",
+    img: img_Diabetes,
     dataset: "https://www.kaggle.com/uciml/pima-indians-diabetes-database",
     name: "Diabetes Detection",
     features: ["Pregnancies", "Glucose", "BloodPressure", "SkinThickness", "Insulin", "BMI", "DiabetesPedigreeFunction", "Age"],
     algorithm: "Neural Network",
     subheading: "Predicts if a person has diabetes or not using his/her medical records",
     description: "Traditionally doctors and medicians have been predicting out the probability of having chronic dieseases using person's medical history, but with the development of Machine Learning and sophisticated algorithm, the machine learns to predict the odds of having these diseases with just hours or even minutes of training. Thus it automates this task and helps doctors to predict more confidently with less bias."
-},
-{
-    url: "DigitRecognition",
-    dataset: "http://yann.lecun.com/exdb/mnist",
-    name: "Digit Recongnition",
-    algorithm: "Convolutional Neural Network(CNN)"
 }
 ]
 export default ML_models;

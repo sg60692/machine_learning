@@ -11,12 +11,12 @@ function Header() {
     }
     function NavItem(props) {
         return (
-          <li onClick={handleClick} key={props.name}><AnchorLink href={`#${props.name}`} >{props.name}</AnchorLink></li>
+          <li onClick={handleClick} key={props.name}><AnchorLink href={`#${props.name}`} >{props.key}</AnchorLink></li>
         );
     }
     function navItems(){
         var list=[];
-        for(var i=0;i<ProjectList.length;++i)list.push(NavItem({name:ProjectList[i].url,key:ProjectList[i].url}));
+        for(var i=0;i<ProjectList.length;++i)list.push(NavItem({name:ProjectList[i].url,key:ProjectList[i].navname}));
         return list;
     }
     return (

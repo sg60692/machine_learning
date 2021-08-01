@@ -5,6 +5,7 @@ import img_Digit from "../../images/Digit.webp";
 const ML_models = [
 {
     url: "Cancer",
+    github: "https://github.com/sg60692/machine_learning/tree/main/Jupyter-notebooks/BreastCancerClassification",
     img: img_Cancer,
     dataset: "https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/",
     navname:"Cancer Classification",
@@ -16,6 +17,7 @@ const ML_models = [
 },
 {
     url: "Diabetes",
+    github: "https://github.com/sg60692/machine_learning/tree/main/Jupyter-notebooks/Diabetes%20Detection",
     img: img_Diabetes,
     navname:"Diabetes Detection",
     dataset: "https://www.kaggle.com/uciml/pima-indians-diabetes-database",
@@ -27,6 +29,7 @@ const ML_models = [
 },
 {
     url: "BoardGame",
+    github: "https://github.com/sg60692/machine_learning/tree/main/Jupyter-notebooks/Board%20Game%20Review%20Predictions",
     img: img_BoardGame,
     navname:"Board Game Review",
     dataset: "https://github.com/sg60692/machine_learning/blob/main/Jupyter-notebooks/Board%20Game%20Review%20Predictions/games.csv",
@@ -39,6 +42,7 @@ const ML_models = [
 },
 {
     url: "DigitRecognition",
+    github: "https://github.com/sg60692/machine_learning/tree/main/Jupyter-notebooks/Digit%20Identifier",
     img: img_Digit,
     dataset: "http://yann.lecun.com/exdb/mnist",
     navname:"Digit Recongnition",

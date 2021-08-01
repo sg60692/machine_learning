@@ -62,7 +62,7 @@ const DrawingBoard = (props) => {
     }
 
     return (
-        <div class="top">
+        <div className="top">
             <div className="drawing-area text-center text-dark">
                 <Stage
                     width={224}

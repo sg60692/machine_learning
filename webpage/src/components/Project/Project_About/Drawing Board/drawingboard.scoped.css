@@ -1,10 +1,41 @@
 .drawing-area {
-    width: 600px;
-    height: 300px;
-    margin-right: 3%;
-    background-color: black;
-  }
+    width: 224px;
+    height: 224px;
+}
   
+.top {
+    border-radius:0 0 5px 5px;
+    padding:1%;
+    display: block;
+    position: relative;
+    margin: auto;
+}
+
 .drawing-area:hover{
     cursor: pointer;
+}
+
+.Project-form-grid{
+  position: relative;
+  width:100%;
+  display:inline-grid;
+  grid-template-columns: 32% 32% 32%;
+  row-gap: 10px;
+  column-gap: 1.8%;
+}
+
+.btn-random,.btn-clear,.btn-submit{
+  height:30px;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.btn-clear{
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-submit{
+  background-color: #28a745;
+  border-color: #28a745;
 }

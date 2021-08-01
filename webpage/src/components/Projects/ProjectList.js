@@ -27,7 +27,7 @@ const ML_models = [{
     description: "Traditionally doctors and medicians have been predicting out the probability of having chronic dieseases using person's medical history, but with the development of Machine Learning and sophisticated algorithm, the machine learns to predict the odds of having these diseases with just hours or even minutes of training. Thus it automates this task and helps doctors to predict more confidently with less bias."
 },
 {
-    url: "DigitRecongnition",
+    url: "DigitRecognition",
     dataset: "http://yann.lecun.com/exdb/mnist",
     name: "Digit Recongnition",
     algorithm: "Convolutional Neural Network(CNN)"

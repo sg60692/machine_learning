@@ -6,13 +6,13 @@
     margin-bottom: 40px;
 }
 .Project-graph img{
-    width:60%;
-    height: 260px;
+    width:50%;
+    height: 300px;
     border-right: 1px solid;
     box-shadow: 0 0 10px 0 rgba(0, 10, 66, 0.4);
 }
 .Project-graph-links{
-    width:40%;
+    width:50%;
     padding:10px;
     align-items: center;
     padding-top: 30px;
@@ -27,10 +27,11 @@
     z-index: 2;
     position:absolute;
     right:-100%;
+    height: 100%;
     width: inherit;
     background-color: #fff;
     margin-top: -15px;
-    height: 200px;
+    height: 250px;
     display: block;
     overflow: hidden;
     border-radius: 2px;
@@ -82,6 +83,9 @@
     background-color: #e0b527;
 }
 @media screen and (max-width: 1200px) {
+    .insights{
+        height:200px;
+    }
     .Project-graph{
         flex-direction: column;
         padding:0;

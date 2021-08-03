@@ -36,9 +36,8 @@ const ML_models = [
     name: "Board Game Review Prediction",
     features: ['yearpublished', 'minplayers', 'maxplayers', 'playingtime', 'minage', 'users_rated', 'total_owners', 'total_traders', 'total_wanters', 'total_wishers', 'total_comments', 'total_weights', 'average_weight'],
     algorithm: "Linear and Random Forest Regressor",
-    subheading: "",
-    description: "Give some valid description, the previous one was plagarized(easily availiable on net)"
-    // description: "Reviews can make or break a product; as a result, many companies take drastic measures to ensure that their product receives good reviews. When it comes to board games, reviews and word-of-mouth are everything. In this model, we have used a linear regression model to predict the average review a board game will receive based on characteristics such as minimum and maximum number of players, playing time, complexity, etc."
+    subheading: "Predicts if your game has what it takes to be the best",
+    description: "Board game review predictions are used to predict game popularity in the near future. This is very helpful for industries to decide which games will generate revenue for it. In this model, we have used linear regression model to predict a game's future average rating based onboard games properties such as max_players, min_players, playing_time, etc."
 },
 {
     url: "DigitRecognition",
@@ -46,7 +45,9 @@ const ML_models = [
     img: img_Digit,
     dataset: "http://yann.lecun.com/exdb/mnist",
     navname:"Digit Recongnition",
+    subheading: "Just a fun digit recognition tool",
     name: "Digit Recongnition",
+    description:"We have built a handwritten digit recognition model using LeNet-5 CNN model. This technology has a vast ranging applications such as Bank Cheque/Documents processing, Document Verification system(OCR and ID verification) and Examination grading by digitization, etc",
     algorithm: "Convolutional Neural Network(CNN)"
 }
 ]

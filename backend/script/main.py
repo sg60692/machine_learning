@@ -6,26 +6,26 @@ from PIL import Image
 import pickle
 from sklearn.pipeline import Pipeline
 from tensorflow.keras.models import load_model
-import socketio
+import socketio as socket
 
 
 def connect_socket():
-    sio = socketio.Client()
-    sio.connect('http://localhost:5000')
+    sio = socket.Client(logger=True, engineio_logger=True)
+    sio.connect('https://mlprojects-backend.herokuapp.com')
     return sio
 
 
 def load_models():
-    Cancer_model = pickle.load(open('./script/kNeighborsClassifier.pkl', 'rb'))
+    Cancer_model = pickle.load(open('script/kNeighborsClassifier.pkl', 'rb'))
 
-    Diabetes_scale = pickle.load(open('./script/Scaler.pkl', 'rb'))
-    Diabetes_model = load_model('./script/neural_network_model.h5')
+    Diabetes_scale = pickle.load(open('script/Scaler.pkl', 'rb'))
+    Diabetes_model = load_model('script/neural_network_model.h5')
     Diabetes_pipeline = Pipeline(
         [('scaler', Diabetes_scale), ('Neural-network', Diabetes_model)])
 
-    BoardGame_model = pickle.load(open('./script/RFR.pkl', 'rb'))
+    BoardGame_model = pickle.load(open('script/RFR.pkl', 'rb'))
 
-    digit_model = load_model('./script/digit.h5')
+    digit_model = load_model('script/digit.h5')
 
     return Cancer_model, Diabetes_pipeline, BoardGame_model, digit_model
 

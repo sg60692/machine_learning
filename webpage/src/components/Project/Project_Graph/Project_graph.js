@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import './Project_graph.scoped.css';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import AssignmentIcon from '@material-ui/icons/Assignment';
@@ -14,11 +14,11 @@ function Project_graph(props) {
     }
     return (
         <div className="Project-graph">
-            <img src={props.img} alt="graph"/>
+            <img src={props.img} alt="graph" />
             <div className="Project-graph-links">
                 <div className={`insights ${insightToggle ? 'insights-display' : ''}`} >
                     <IconButton className="cancel" onClick={Toggle}><CancelIcon /> </IconButton>
-                    <p>{props.insights}</p>
+                    <br /> <p>{props.insights}</p>
                 </div>
                 <button className="view-insights" onClick={Toggle}><span>View Insights</span><AppsIcon /></button>
                 <a href={props.dataset}><button className="view-dataset"><span>View Dataset</span><AssignmentIcon /></button></a>

@@ -37,12 +37,14 @@
     border-radius: 2px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.137);
     transition: 0.5s ease;
+    overflow-y:auto;
 }
 .insights-display{
-    right:0;
+    right:-0.5%;
 }
 .insights p{
-    padding:5px;
+    padding-left: 8px;
+    text-align: left;
 }
 .cancel{
     float:right;

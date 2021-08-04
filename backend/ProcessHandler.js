@@ -4,24 +4,26 @@ const socketio = require("socket.io");
 let Socket = null;
 
 exports.CreateProcess = (server) => {
-    const python = spawn('python', ['./script/main.py']);
-
-    python.stdout.on('data', function (data) {
-        console.log(data.toString());
+    const io = socketio(server, {
+        rejectUnauthorized: false
     });
-    python.stderr.on('data', function (e) {
-        console.log(e.toString());
-    });
-    python.on('close', (code) => {
-        console.log("Python Closed")
-    });
-
-    const io = socketio(server);
-
     io.on('connection', (socket) => {
         Socket = socket;
         console.log('connected');
     });
+    setTimeout(() => {
+        const python = spawn('python', ['./script/main.py']);
+
+        python.stdout.on('data', function (data) {
+            console.log(data.toString());
+        });
+        python.stderr.on('data', function (e) {
+            console.log(e.toString());
+        });
+        python.on('close', (code) => {
+            console.log("Python Closed")
+        });
+    }, 5000);
 }
 
 

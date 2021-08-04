@@ -1,12 +1,12 @@
 .drawing-area {
     width: 224px;
     height: 224px;
+    margin-right: 15px;
 }
-  
 .top {
     border-radius:0 0 5px 5px;
     padding:1%;
-    display: block;
+    display: flex;
     position: relative;
     margin: auto;
 }
@@ -18,10 +18,8 @@
 .Project-form-grid{
   position: relative;
   width:100%;
-  display:inline-grid;
-  grid-template-columns: 32% 32% 32%;
-  row-gap: 10px;
-  column-gap: 1.8%;
+  display: flex;
+  flex-direction: column;
 }
 
 .btn-random,.btn-clear,.btn-submit{
@@ -38,4 +36,12 @@
 .btn-submit{
   background-color: #28a745;
   border-color: #28a745;
+}
+@media screen and (max-width: 500px) {
+  .drawing-area{
+    margin-right: 0;
+  }
+  .top{
+    display: block;
+  }
 }

@@ -80,6 +80,7 @@ const DrawingBoard = (props) => {
                             width={224}
                             height={224}
                             fill="black"
+                            className="canvas-stage"
                         />
                     </Layer>
                     <Layer>

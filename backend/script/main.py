@@ -34,22 +34,6 @@ sio = connect_socket()
 Cancer_model, Diabetes_pipeline, BoardGame_model, digit_model = load_models()
 
 
-@sio.event
-def connect():
-    print("I'm connected!")
-
-
-@sio.event
-def connect_error(data):
-    print("The connection failed!")
-
-
-@sio.on('my_message')
-def my_message(data):
-    print(data)
-    sio.emit('message_received')
-
-
 @sio.on('cancer')
 def cancer(features):
     n_feature = np.array([int(feature) for feature in features])

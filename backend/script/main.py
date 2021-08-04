@@ -10,7 +10,7 @@ import socketio as socket
 
 
 def connect_socket():
-    sio = socket.Client(logger=True, engineio_logger=True)
+    sio = socket.Client()
     sio.connect('https://mlprojects-backend.herokuapp.com')
     return sio
 

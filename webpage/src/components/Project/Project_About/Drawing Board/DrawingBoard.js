@@ -111,9 +111,8 @@ const DrawingBoard = (props) => {
 
 function Alert(props) {
     const [alert, setalert] = useState({ text: "Loading..." });
-    console.log(props.feature);
     if (alert.text === "Loading...")
-        api.fetchreq({ imageUrl: props.feature }, props.url).then(data => { setalert({ text: data.data }); console.log(data); });
+        api.fetchreq({ imageUrl: props.feature }, props.url).then(data => { setalert({ text: data.data });});
 
     return <div>{alert.text}</div>
 }

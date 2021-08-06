@@ -10,7 +10,6 @@ function Project_graph(props) {
     const [insightToggle, setToggle] = useState(false)
     function Toggle() {
         setToggle(!insightToggle);
-        console.log(props.github);
     }
     return (
         <div className="Project-graph">

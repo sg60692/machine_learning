@@ -60,7 +60,7 @@ function Project_input(props) {
 function Alert(props) {
     const [alert, setalert] = useState({ text: "Loading..." });
     if (alert.text === "Loading...")
-        api.fetchreq(props.feature, props.url).then(data => { setalert({ text: data.data }); console.log(data); });
+        api.fetchreq(props.feature, props.url).then(data => { setalert({ text: data.data });});
 
     return <div>{alert.text}</div>
 }

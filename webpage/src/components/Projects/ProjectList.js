@@ -4,6 +4,18 @@ import img_Diabetes from "../../images/Diabetes.webp";
 import img_Digit from "../../images/model_plot.webp";
 const ML_models = [
     {
+        url: "DigitRecognition",
+        github: "https://github.com/sg60692/machine_learning/tree/main/Jupyter-notebooks/Digit%20Identifier",
+        img: img_Digit,
+        dataset: "http://yann.lecun.com/exdb/mnist",
+        navname: "Digit Recongnition",
+        subheading: "Just a fun digit recognition tool",
+        name: "Digit Recongnition",
+        description: "We have built a handwritten digit recognition model using LeNet-5 CNN model. This technology has a vast ranging applications such as Bank Cheque/Documents processing, Document Verification system(OCR and ID verification) and Examination grading by digitization, etc",
+        algorithm: "Convolutional Neural Network(CNN)",
+        insights: "We have used the MNIST model conataining 28*28 grayscale image for training and testing. Therefore we have made the drawing board small (224*224) with black background and white pencil (Similar to training images). The Image conversion is done in the backend. We trainined the variation of LeNet-5 CNN model using the model plot shown on the left. This model gave above 98% test accuracy. On production we trained the model on the entire test+train data to acheive higher accuracy. We also found that the distribution of train-test data in the mnist model was very similar, therefore the model on generalization gave an accuracy of 80-90%."
+    },
+    {
         url: "Cancer",
         github: "https://github.com/sg60692/machine_learning/tree/main/Jupyter-notebooks/BreastCancerClassification",
         img: img_Cancer,
@@ -41,18 +53,6 @@ const ML_models = [
         subheading: "Predicts if your game has what it takes to be the best",
         description: "Board game review predictions are used to predict game popularity in the near future. This is very helpful for industries to decide which games will generate revenue for it. In this model, we have used linear regression model to predict a game's future average rating based onboard games properties such as max_players, min_players, playing_time, etc.",
         insights: "We used Linear Regression(LR) and Random Forest Regression(RFR) algorithm while development of Board Game Rating Prediction model. By hyper-parameter tuning we found that the Random Forest Regressor algorithm gave a Least Squared error(LSE) of 1.46 with min-leaf parameter set to 12, whereas a Linear Regressor gave a LSE of 2.08. Since the LR model gave wrose LSE than RFR we used Random Forest Regression model on production."
-    },
-    {
-        url: "DigitRecognition",
-        github: "https://github.com/sg60692/machine_learning/tree/main/Jupyter-notebooks/Digit%20Identifier",
-        img: img_Digit,
-        dataset: "http://yann.lecun.com/exdb/mnist",
-        navname: "Digit Recongnition",
-        subheading: "Just a fun digit recognition tool",
-        name: "Digit Recongnition",
-        description: "We have built a handwritten digit recognition model using LeNet-5 CNN model. This technology has a vast ranging applications such as Bank Cheque/Documents processing, Document Verification system(OCR and ID verification) and Examination grading by digitization, etc",
-        algorithm: "Convolutional Neural Network(CNN)",
-        insights: "We have used the MNIST model conataining 28*28 grayscale image for training and testing. Therefore we have made the drawing board small (224*224) with black background and white pencil (Similar to training images). The Image conversion is done in the backend. We trainined the variation of LeNet-5 CNN model using the model plot shown on the left. This model gave above 98% test accuracy. On production we trained the model on the entire test+train data to acheive higher accuracy. We also found that the distribution of train-test data in the mnist model was very similar, therefore the model on generalization gave an accuracy of 80-90%."
-    }
+    }    
 ]
 export default ML_models;

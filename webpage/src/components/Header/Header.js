@@ -11,7 +11,7 @@ function Header() {
     }
     function NavItem(props) {
         return (
-          <li onClick={handleClick} key={props.name}><AnchorLink href={`#${props.name}`} >{props.key}</AnchorLink></li>
+         <AnchorLink href={`#${props.name}`} ><li onClick={handleClick} key={props.name}>{props.key}</li></AnchorLink>
         );
     }
     function navItems(){

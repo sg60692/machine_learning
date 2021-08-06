@@ -9,3 +9,5 @@ To install and run on local, do following:
 <li> Ensure that you have python3.9.5. pip install all the dependency in the file script/main.py in your local.</li>
 <li>"npm start" at both webpage and backend folder. Your app will be then available for you at localhost:3000. </li>
 </ol> 
+
+You can try our app on: https://mlmodelimplementations.netlify.app/

@@ -68,8 +68,11 @@ const DrawingBoard = (props) => {
                     width={224}
                     height={224}
                     onMouseDown={handleMouseDown}
+                    onTouchStart={handleMouseDown}
                     onMousemove={handleMouseMove}
+                    onTouchMove={handleMouseMove}
                     onMouseup={handleMouseUp}
+                    onTouchEnd={handleMouseUp}
                     className="canvas-stage"
                     ref={stageRef}
                 >

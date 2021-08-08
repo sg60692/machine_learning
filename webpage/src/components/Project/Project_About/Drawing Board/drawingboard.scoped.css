@@ -39,6 +39,12 @@
   background-color: #28a745;
   border-color: #28a745;
 }
+.btn-random{
+  background-color: #dc3545;
+  border-color: black;
+  padding-left: 4px;
+  padding-right: 4px;
+}
 @media screen and (max-width: 500px) {
   .drawing-area{
     margin-right: 0;

@@ -103,6 +103,7 @@ const DrawingBoard = (props) => {
             <div className="Project-form-grid" style={{ marginTop: '10px' }}>
                 <button type="reset" onClick={e => setLines([])} className="btn-clear">Clear</button>
                 <button type="submit" onClick={handleExport} className="btn-submit">Submit</button>
+                <label type="dark" className="btn-random">&lt; --Draw a digit from 0-9</label>
             </div>
 
         </div>

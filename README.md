@@ -2,7 +2,7 @@
 
 To install and run on local, do following: 
 <ol>
-<li> Git clone this repoository. </li>
+<li> Git clone this repository. </li>
 <li> Go to webpage directory and npm install dependencies using "npm i" command. </li>
 <li> Add the proxy at package.json and change the url at src/api/index.js to http://localhost:5000 </li>
 <li> Go to backend folder and again install npm dependency using "npm i" commmand. </li>
